@@ -17,14 +17,14 @@ From our perspective to tackle this problem, resampling techniques such as SMOTE
  It can be observed that different combination result in better macro performance where different combination results in better weighted performance. XGBoost
 model trained with the reduced baseline dataset achieved an accuracy of 99.9% and an F1 score of 99.9 as well. On the other hand the DT model trained with the reduced feature resampled dataset had an accuracy of 87.77% and an F1 score of 87.20.
 
-![plot](https://github.com/sotirischatzimiltis/SDN_IDS/blob/main/Figures/test_set_performance.PNG)
-![plot](https://github.com/sotirischatzimiltis/SDN_IDS/blob/main/Figures/macro_test_performance.PNG)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/test_set_performance.PNG)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/macro_test_performance.PNG)
 
 The confusion matrices reveal that the XGBoost model faces challenges when classifying the three web attacks and the Infiltration attack. On the other hand, the DT model
 exhibits a slight improvement in classifying these attacks but at the cost of a slight decrease in normal traffic classification performance.
 
-![plot](https://github.com/sotirischatzimiltis/SDN_IDS/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
-![plot](https://github.com/sotirischatzimiltis/SDN_IDS/blob/main/Figures/dt_test_reduced_cf.png)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/dt_test_reduced_cf.png)
 #### Authors 
 Sotiris Chatzimiltis, Mohammad Shojafar, Mahdi Boloursaz Mashhadi, and Rahim Tafazolli <br />
 5GIC \& 6GIC, Institute for Communication Systems (ICS), University of Surrey, Guildford, UK <br />
