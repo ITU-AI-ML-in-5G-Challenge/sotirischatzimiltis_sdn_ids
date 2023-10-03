@@ -20,7 +20,7 @@ The following script removes instances with NaN or Infinte values, removes dupli
     - test_file_path
 3. Script will create two new csv files.
     -  cleaned_dataset_train.csv
-    -  cleaned_datase_test.csv
+    -  cleaned_dataset_test.csv
 
 #### Feature Selection
 This script uses Random Forest feature importance to elliminate features that do not contribute in the overall training procedure.
