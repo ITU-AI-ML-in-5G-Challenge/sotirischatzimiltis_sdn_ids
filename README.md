@@ -21,8 +21,18 @@ model trained with the reduced baseline dataset achieved an accuracy of 99.9% an
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/test_set_performance.PNG)
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/macro_test_performance.PNG)
 
+
 The confusion matrices reveal that the XGBoost model faces challenges when classifying the three web attacks and the Infiltration attack. On the other hand, the DT model
 exhibits a slight improvement in classifying these attacks but at the cost of a slight decrease in normal traffic classification performance.
+
+
+|Model |Training Time (seconds)     | Test Time (seconds)    | 
+| ------------- |:-----------:|:--------:|
+| XGBoost |1755|1.44|
+| DecisionTree |485|0.29|
+> Training and Testing times for the final 2 models selected.
+> 
+> Models Trained on Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz , 32GB RAM
 
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
 |Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
@@ -42,7 +52,7 @@ exhibits a slight improvement in classifying these attacks but at the cost of a 
 | Web Attack Brute Force     | 0.730    | 0.820          | 0.770       | 0.8199|0.001       |272 |
 | Web Attack Sql Injection    | 0.000     | 0.000          | 0.000       | 0.000|0.000       | 4|
 | Web Attack XSS     | 0.470    | 0.320          | 0.380       | 0.3162|0.00008       |117|
-> Performance Evaluation Breakdown for every data traffic for XGBoost Model trained of the reduced baseline dataset
+> Performance Evaluation Breakdown for every data traffic for XGBoost Model trained of the reduced baseline dataset.
 
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/dt_test_reduced_cf.png)
 
@@ -63,7 +73,7 @@ exhibits a slight improvement in classifying these attacks but at the cost of a 
 | Web Attack Brute Force     | 0.760    | 0.680          | 0.720       | 0.6801|0.00001       |272 |
 | Web Attack Sql Injection    | 1.000     | 0.250          | 0.400       | 0.250|0.000       | 4|
 | Web Attack XSS     | 0.400    | 0.510          | 0.450       | 0.5128|0.0001     |117|
-> Performance Evaluation Breakdown for every data traffic for DT Model trained of the reduced resampled dataset
+> Performance Evaluation Breakdown for every data traffic for DT Model trained of the reduced resampled dataset.
 
 #### Authors 
 Sotiris Chatzimiltis, Mohammad Shojafar, Mahdi Boloursaz Mashhadi, and Rahim Tafazolli <br />
