@@ -24,7 +24,46 @@ The confusion matrices reveal that the XGBoost model faces challenges when class
 exhibits a slight improvement in classifying these attacks but at the cost of a slight decrease in normal traffic classification performance.
 
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
+|Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
+| ------------- |:-----------:|:---------:|:----------:|:---------:|:---:|:----:|
+| Benign     | 1.000     | 1.000          | 1.000       | 0.9993| 0.001      | 410865|
+| Bot     | 0.860    | 0.810          | 0.840       | 0.8107|0.00008       | 354|
+| DDoS     | 1.000     | 1.000          | 1.000       | 0.9999|0.000008       | 23160|
+| DoS Golden Eye     | 1.000     | 1.000          | 1.000       | 0.9957|0.000007       | 1861|
+| DoS Hulk   | 1.000     | 1.000          | 1.000       | 0.9998|0.0001       | 41626|
+| DoS Slowhttptest   | 0.990     | 0.990          | 0.990       | 0.9899|0.00002       | 994|
+| DoS Slowloris     | 1.000     | 1.000          | 1.000       | 0.9981|0.000009       | 1048|
+| FTP Patator     | 1.000     | 1.000          | 1.000       | 0.9993|0.000001       | 1436|
+| Heartbleed    | 1.000     | 1.000          | 1.000       | 1.000|0       | 2|
+| Infiltration    | 1.000     | 0.500          | 0.670      | 0.5000|0       | 6|
+| Portscan     | 0.990     | 1.000          | 1.000       | 0.9997|0.0003       | 28728|
+| SSH Patator     | 1.000     | 1.000          | 1.000       | 0.9991|0.000005       | 1067|
+| Web Attack Brute Force     | 0.730    | 0.820          | 0.770       | 0.8199|0.001       |272 |
+| Web Attack Sql Injection    | 0.000     | 0.000          | 0.000       | 0.000|0.000       | 4|
+| Web Attack XSS     | 0.470    | 0.320          | 0.380       | 0.3162|0.00008       |117|
+> Performance Evaluation Breakdown for every data traffic for XGBoost Model trained of the reduced baseline dataset
+
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/dt_test_reduced_cf.png)
+
+|Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
+| ------------- |:-----------:|:---------:|:----------:|:---------:|:---:|:----:|
+| Benign     | 1.000     | 1.000          | 1.000       | 0.9993| 0.009      | 410865|
+| Bot     | 0.680    | 0.930          | 0.780       | 0.9266|0.0003       | 354|
+| DDoS     | 1.000     | 1.000          | 1.000       | 0.9998|0.00001       | 23160|
+| DoS Golden Eye     | 0.9990     | 1.000     | 0.990       | 0.9973|0.00005      | 1861|
+| DoS Hulk   | 1.000     |0.980          | 0.990       | 0.9786|0.0001       | 41626|
+| DoS Slowhttptest   | 0.970     | 0.990          | 0.980       | 0.9920|0.00006       | 994|
+| DoS Slowloris     | 0.990     | 0.980          | 0.980       | 0.9809|0.00002       | 1048|
+| FTP Patator     | 1.000     | 1.000          | 1.000       | 0.9993|0.000001       | 1436|
+| Heartbleed    | 1.000     | 1.000          | 1.000       | 1.000|0       | 2|
+| Infiltration    | 0.710     | 0.830          | 0.770      | 0.8333|0.000004       | 6|
+| Portscan     | 0.990     | 1.000          | 1.000       | 0.9977|0.0004       | 28728|
+| SSH Patator     | 1.000     | 1.000          | 1.000       | 0.9991|0.000004       | 1067|
+| Web Attack Brute Force     | 0.760    | 0.680          | 0.720       | 0.6801|0.00001       |272 |
+| Web Attack Sql Injection    | 1.000     | 0.250          | 0.400       | 0.250|0.000       | 4|
+| Web Attack XSS     | 0.400    | 0.510          | 0.450       | 0.5128|0.0001     |117|
+> Performance Evaluation Breakdown for every data traffic for DT Model trained of the reduced resampled dataset
+
 #### Authors 
 Sotiris Chatzimiltis, Mohammad Shojafar, Mahdi Boloursaz Mashhadi, and Rahim Tafazolli <br />
 5GIC \& 6GIC, Institute for Communication Systems (ICS), University of Surrey, Guildford, UK <br />
