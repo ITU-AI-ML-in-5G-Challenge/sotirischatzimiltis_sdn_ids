@@ -14,6 +14,7 @@ Network traffic datasets used for IDS are usually imbalanced. Imbalanced data us
 From our perspective to tackle this problem, resampling techniques such as SMOTE and Tomek’s link  were utilised in order to alleviate data imbalances between classes.
 
 #### Results
+Experiment were made using 4 variations of the initial dataset. The first dataset (called baseline) is the cleaned dataset containing all the features. The second dataset (reduced-baseline) contains 37 features extracted using random forest feature importance. The third dataset (resampled_baseline) is a the baseline dataset but contains a lot more instances of minority class data traffic in an attempt to reduce data imbalance. The final dataset is the reduced resampled dataset that contains all the instances from the resampled baseline dataset but contains the 37 features selected in the second dataset. 
  It can be observed that different combination result in better macro performance where different combination results in better weighted performance. XGBoost
 model trained with the reduced baseline dataset achieved an accuracy of 99.9% and an F1 score of 99.9 as well. On the other hand the DT model trained with the reduced feature resampled dataset had an accuracy of 87.77% and an F1 score of 87.20.
 
