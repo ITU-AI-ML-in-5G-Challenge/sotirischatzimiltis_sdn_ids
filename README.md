@@ -59,7 +59,7 @@ exhibits a slight improvement in classifying these attacks but at the cost of a 
 
 |Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
 | ------------- |:-----------:|:---------:|:----------:|:---------:|:---:|:----:|
-| Benign     | 1.000     | 1.000          | 1.000       | 0.9993| 0.009      | 410865|
+| Benign     | 1.000     | 1.000          | 1.000       | 0.9989| 0.009      | 410865|
 | Bot     | 0.680    | 0.930          | 0.780       | 0.9266|0.0003       | 354|
 | DDoS     | 1.000     | 1.000          | 1.000       | 0.9998|0.00001       | 23160|
 | DoS Golden Eye     | 0.9990     | 1.000     | 0.990       | 0.9973|0.00005      | 1861|
