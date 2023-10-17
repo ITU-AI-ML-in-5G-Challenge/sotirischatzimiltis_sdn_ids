@@ -9,7 +9,8 @@
 - xgboost (1.7.3)
 - tabulate (0.8.10)
 - psutil (5.9.0)
-- imbens (0.11.0)
+- imbens (0.2.1)
+- imblearn (0.11.0)
 
 ### Usage
 #### Data Pre-processing
@@ -40,6 +41,16 @@ The models used in the srcipt are: Decision Trees, Random Forest, K-Nearest Neig
     - train_file_path
     - test_file_path
 3. Script will create two text file for each model, one for cross-validation performance and one for test set evaluation. Furthermore the script will create two confusion matrices for each model.
+
+#### Resample Dataset 
+This script contains 6 (six) different resampling techniques. Three undersampling, one oversampling and two combination of over and under sampling. 
+The techniques are: Tomek's link, Repeated Edited Nearest Neighbours, Condensed Nearest Neighbours, SMOTE, SMOTETomek and SMOTEEen.
+1. Download the [resample_dataset_script.py](https://github.com/sotirischatzimiltis/SDN_IDS/blob/main/Scripts/ml_models_script.py).
+2. Change paths accordingly for:
+    - train_file_path
+    - test_file_path
+3. Choose the desired technique (better to comment out rest of techniques since for large dataset such as the ULAK dataset it takes time).
+4. Script will create the new training dataset and create a copy of the test dataset. 
    
 
      
