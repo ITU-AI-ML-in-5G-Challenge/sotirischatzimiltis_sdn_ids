@@ -19,6 +19,9 @@ proficiency in identifying 12 out of the 15 possible traﬀic classes
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/ITU_SDN_IDS.png)
 Our SDN-IDS utilises a 4-step approach. Firstly the data are pre-processed (cleaned,encoded,normalised), the dimension of the dataset was reduced using a RF feature selection, then data were resampled when necessary. Finally, different ML models are trained and evaluated in order to obtain the best one. 
 
+#### Dataset:
+The dataset was provided by ULAK. After the data cleaning phase the training and test sets are as described in the table below. 
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/original_dataset.PNG)
 #### About Machine Learning Models Used:
 Five ML models in total were chosen to be used. Decision Trees (DT), Random Forest (RF) and K-Nearest Neighbours (K-NN) were selected
 since they have an extensive use in the topic of IDS, are easy to implement and support multi-class classification. Also a Bagging and a Boosting classifier were utilised. 
@@ -30,6 +33,15 @@ From our perspective to tackle this problem, resampling techniques such as SMOTE
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/TOMEK.png)
 
 #### Results
+
+|Model|Precision| Recall    | F1-Score  | Accuracy|
+| --- |:--------:|:-- ---|:--------:|:------:|
+|DT| 0.9983| 0.9983| 0.9983| 0.9983|
+|RF| 0.9981| 0.9980| 0.9980| 0.9980|
+|K-NN| 0.9971| 0.9971| 0.9971| 0.9971|
+|Bagging| 0.9984| 0.9984| 0.9984| 0.9984|
+|XGBoost| 0.9986| 0.9986| 0.9986 |0.9986|
+> Performance Evaluation Breakdown for every data traffic for XGBoost Model trained of the reduced baseline dataset.
 
 
 |Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
