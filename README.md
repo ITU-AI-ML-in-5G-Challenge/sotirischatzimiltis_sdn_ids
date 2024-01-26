@@ -16,7 +16,7 @@ overall performance with 99.87% accuracy and an F1-score of 99.87. Additionally,
 proficiency in identifying 12 out of the 15 possible traﬀic classes
 
 ####  Software Defined Network Intrusion Detection System (SDN-IDS) Architecture:
-![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/ITU_SDN_IDS.png)
 Our SDN-IDS utilises a 4-step approach. Firstly the data are pre-processed (cleaned,encoded,normalised), the dimension of the dataset was reduced using a RF feature selection, then data were resampled when necessary. Finally, different ML models are trained and evaluated in order to obtain the best one. 
 
 #### About Machine Learning Models Used:
@@ -26,29 +26,12 @@ since they have an extensive use in the topic of IDS, are easy to implement and 
 #### About Resampling Techniques:
 Network traffic datasets used for IDS are usually imbalanced. Imbalanced data usually lead to a biased model towards the majority class. 
 From our perspective to tackle this problem, resampling techniques such as SMOTE and Tomek’s link  were utilised in order to alleviate data imbalances between classes.
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/SMOTE.png)
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/TOMEK.png)
 
 #### Results
-Experiment were made using 4 variations of the initial dataset. The first dataset (baseline) is the cleaned dataset containing all the features. The second dataset (reduced-baseline) contains 34 features extracted using random forest feature importance. The third dataset (resampled_baseline) is a the baseline dataset but contains a lot more instances of minority class data traffic in an attempt to reduce data imbalance. The final dataset is the reduced resampled dataset that contains all the instances from the resampled baseline dataset but contains the 34 features selected in the second dataset. 
- It can be observed that different combination result in better macro performance where different combination results in better weighted performance. XGBoost
-model trained with the reduced baseline dataset achieved an accuracy of 99.9% and an F1 score of 99.9 as well. On the other hand the DT model trained with the reduced feature resampled dataset had an accuracy of 87.77% and an F1 score of 87.20.
-
-![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/test_set_performance.PNG)
-![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/macro_test_performance.PNG)
 
 
-The confusion matrices reveal that the XGBoost model faces challenges when classifying the three web attacks and the Infiltration attack. On the other hand, the DT model
-exhibits a slight improvement in classifying these attacks but at the cost of a slight decrease in normal traffic classification performance.
-
-
-|Model |Training Time (seconds)     | Test Time (seconds)    | 
-| ------------- |:-----------:|:--------:|
-| XGBoost |1755|1.44|
-| DecisionTree |485|0.29|
-> Training and Testing times for the final 2 models selected.
-> 
-> Models Trained on Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz , 32GB RAM
-
-![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
 |Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
 | ------------- |:-----------:|:---------:|:----------:|:---------:|:---:|:----:|
 | Benign     | 1.000     | 1.000          | 1.000       | 0.9993| 0.001      | 410865|
@@ -68,7 +51,7 @@ exhibits a slight improvement in classifying these attacks but at the cost of a 
 | Web Attack XSS     | 0.470    | 0.320          | 0.380       | 0.3162|0.00008       |117|
 > Performance Evaluation Breakdown for every data traffic for XGBoost Model trained of the reduced baseline dataset.
 
-![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/dt_test_reduced_cf.png)
+
 
 |Data Traffic | Precision     | Recall    | F1-Score  | Accuracy|FPR| Support|
 | ------------- |:-----------:|:---------:|:----------:|:---------:|:---:|:----:|
@@ -91,8 +74,7 @@ exhibits a slight improvement in classifying these attacks but at the cost of a 
 
 
 #### Discussion
-By observing the two confusion matrices we can easily conclude that XGBoost classifier has a better performance predicting Benign instances, whereas DT give better predictions on minority classes.
-A reason can be due to resampling of the minority classes the classifier has more data to be train with leading in a better per-class performance. 
+
 
 
 #### Authors 
