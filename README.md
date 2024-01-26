@@ -1,9 +1,22 @@
 ### Intrusion and Vulnerability Detection in Software Defined Networks
 Problem stated by [ITU AI For Good Global Summit](https://challenge.aiforgood.itu.int/match/matchitem/81) and presented by [ITU & ULAK](https://www.youtube.com/watch?v=zgne_H0Ki7M)
 #### Abstract:
-Software Defined Networks (SDNs) have revolutionised the way modern networks are managed and orchestrated. This sophisticated infrastructure can provide numerous benefits but at the same time introduce several security challenges. A centralised controller holds the responsibility of managing the network traffic, thus making it an attractive target to attackers. Intrusion detection systems (IDS) play a crucial role in identifying and addressing security threats within the SDN. By utilising machine learning algorithms an anomaly based detection system was established to identify deviation in network behaviour. Five machine learning algorithms were employed to train the SDN-IDS, and ultimately, the most appropriate one was chosen. The SDN-IDS demonstrated an exceptional overall performance, particularly when using the XGBoost Classifier trained with a reduced feature train dataset, reaching 99.9\% accuracy as well as 99.9 F1-score. Furthermore, the DT classifier trained with a reduced resampled varitation of the dataset exhibited better per-performance in minority class attacks.
+Software Defined Networks (SDNs) have revolutionised the way modern networks are managed and
+orchestrated. This sophisticated infrastructure can provide numerous benefits but at the same time introduce several
+security challenges. A centralised controller holds the responsibility of managing the network traﬀic, thus making it
+an attractive target to attackers. Intrusion detection systems (IDS) play a crucial role in identifying and addressing
+security threats within the SDN. By utilising machine learning algorithms an anomaly based detection system was
+established to identify deviation in network behaviour. Five machine learning algorithms were employed to train the
+SDN-IDS, and ultimately, the most appropriate one was chosen. The SDN-IDS demonstrated an exceptional overall
+performance, particularly when using the XGBoost Classifier trained with a feature-reduced dataset, reaching 99.9%
+accuracy as well as 99.9 F1-score. Moreover, an analysis of the impact of class imbalance practices was conducted to
+demonstrate that specific techniques can enhance the classification performance of minority attacks. The Decision Tree
+(DT) model, trained on a feature-reduced and resampled dataset using cost-sensitive learning, achieved an impressive
+overall performance with 99.87% accuracy and an F1-score of 99.87. Additionally, it demonstrated outstanding
+proficiency in identifying 12 out of the 15 possible traﬀic classes
 
 ####  Software Defined Network Intrusion Detection System (SDN-IDS) Architecture:
+![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/xgb_test_reduced_baseline_cf.png)
 Our SDN-IDS utilises a 4-step approach. Firstly the data are pre-processed (cleaned,encoded,normalised), the dimension of the dataset was reduced using a RF feature selection, then data were resampled when necessary. Finally, different ML models are trained and evaluated in order to obtain the best one. 
 
 #### About Machine Learning Models Used:
