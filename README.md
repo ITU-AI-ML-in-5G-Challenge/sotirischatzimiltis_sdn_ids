@@ -3,19 +3,7 @@ Problem stated by [ITU AI For Good Global Summit](https://challenge.aiforgood.it
 
 Dataset available at [Zenodo Dataset](https://zenodo.org/records/13939009?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijg3M2RiZDc1LTQzYTQtNGVmMy1iZTdlLWM4MWE0ZTVmNzY0MSIsImRhdGEiOnt9LCJyYW5kb20iOiJhNWM2NjJmNTQ2NjI3YTU1NTUzNTM5ZTE2MzA3ZTE1NyJ9.fP1GLAQo7o7cCr6CNpffZP0Oso2zZ7OAKMOgfZqcOvKWW3Y66RuS1top0fS9U7jslFw1wwBb8CHuaVR0kX0lSw)
 #### Abstract:
-Software Defined Networks (SDNs) have revolutionised the way modern networks are managed and
-orchestrated. This sophisticated infrastructure can provide numerous benefits but at the same time introduce several
-security challenges. A centralised controller holds the responsibility of managing the network traﬀic, thus making it
-an attractive target to attackers. Intrusion detection systems (IDS) play a crucial role in identifying and addressing
-security threats within the SDN. By utilising machine learning algorithms an anomaly based detection system was
-established to identify deviation in network behaviour. Five machine learning algorithms were employed to train the
-SDN-IDS, and ultimately, the most appropriate one was chosen. The SDN-IDS demonstrated an exceptional overall
-performance, particularly when using the XGBoost Classifier trained with a feature-reduced dataset, reaching 99.9%
-accuracy as well as 99.9 F1-score. Moreover, an analysis of the impact of class imbalance practices was conducted to
-demonstrate that specific techniques can enhance the classification performance of minority attacks. The Decision Tree
-(DT) model, trained on a feature-reduced and resampled dataset using cost-sensitive learning, achieved an impressive
-overall performance with 99.87% accuracy and an F1-score of 99.87. Additionally, it demonstrated outstanding
-proficiency in identifying 12 out of the 15 possible traﬀic classes
+Software Defined Networks (SDNs) have revolutionised the way modern networks are managed and orchestrated. This sophisticated infrastructure can provide numerous benefits but at the same time introduce several security challenges. A centralised controller holds the responsibility of managing the network traffic, thus making it an attractive target to attackers. Intrusion detection systems (IDS) play a crucial role in identifying and addressing security threats within the SDN. In this paper, we developed an SDN-IDS system by utilising machine learning techniques for anomaly detection to identify deviations in network behaviour. This is specifically challenging due to the fact that we only have a few samples from several of the attack classes, i.e. minority classes. Five machine learning algorithms were employed to train the SDN-IDS, and ultimately, the most appropriate one was chosen. Moreover, we applied the SMOTE and TOMEK link re-samplings on the dataset as well as a cost-sensitive learning technique to enhance the classification performance of the minority attacks. The Decision Tree (DT) model, trained on a feature-reduced and resampled dataset using cost-sensitive learning, achieved an impressive overall performance with 99.87\% accuracy and an F1-score of 99.87. Additionally, it demonstrated a classification accuracy above 99\% in identifying 11 out of the 15 possible traffic classes.
 
 ####  Software Defined Network Intrusion Detection System (SDN-IDS) Architecture:
 ![plot](https://github.com/ITU-AI-ML-in-5G-Challenge/sotirischatzimiltis_sdn_ids/blob/main/Figures/ITU_SDN_IDS.png)
